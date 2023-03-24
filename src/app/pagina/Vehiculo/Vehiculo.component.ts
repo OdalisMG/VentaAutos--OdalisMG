@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { VehiculoService } from 'src/app/servicios/Vehiculo.service';
 @Component({
-  selector: 'app-vehiculo',
-  templateUrl: './vehiculo.component.html',
-  styleUrls: ['./vehiculo.component.css']
+  selector: 'app-vehiculos',
+  templateUrl: './Vehiculo.component.html',
+  styleUrls: ['./Vehiculo.component.css']
 })
-export class VehiculosComponent implements OnInit {
+export class VehiculoComponent implements OnInit {
   constructor(private vehiculoService:VehiculoService) { }
   filtrarPor: String = "";
   listaVehiculo:any[]=[];
@@ -13,5 +13,5 @@ export class VehiculosComponent implements OnInit {
 
   ngOnInit() {
     this.listaVehiculo= this.vehiculoService.getVehiculos();
-}
+  }
 }
