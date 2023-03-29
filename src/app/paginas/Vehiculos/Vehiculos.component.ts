@@ -9,6 +9,7 @@ export class VehiculosComponent implements OnInit {
 
   constructor() { }
 
+  filtrarPor:string = "";
   ngOnInit() {
   }
 
