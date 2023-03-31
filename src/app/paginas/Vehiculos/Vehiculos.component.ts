@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VehiculoService } from 'src/app/servicios/Vehiculo.service';
 
 @Component({
   selector: 'app-Vehiculos',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiculosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vehiculoService: VehiculoService) { }
 
   filtrarPor:string = "";
+
+  listaVehiculo:any[] = [];
+  mostrarImagen:boolean = false;
+  
   ngOnInit() {
+    this.listaVehiculo = this.vehiculoService.getVehiculos();
   }
 
 }
