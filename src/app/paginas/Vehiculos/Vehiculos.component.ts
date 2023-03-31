@@ -14,9 +14,15 @@ export class VehiculosComponent implements OnInit {
 
   listaVehiculo:any[] = [];
   mostrarImagen:boolean = false;
+
+  rows:number = 5
   
   ngOnInit() {
     this.listaVehiculo = this.vehiculoService.getVehiculos();
   }
 
-}
+  cambioRows(){}
+  
+  }
+
+
