@@ -15,7 +15,6 @@ export class CalificacionComponent implements OnInit {
   faStar = faStar;
   
   lista:any[]=[];
-
   ngOnInit() {
     this.lista = [];
     for(let i=1; i<=this.calificacion; i++){

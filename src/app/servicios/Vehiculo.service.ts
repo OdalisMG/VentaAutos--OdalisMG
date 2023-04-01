@@ -34,9 +34,10 @@ getVehiculosFiltro(filtro:string){
     return this.listaAutos;
   }
   return this.listaAutos.filter((item)=>
-  item.codigo.contains(filtro) || item.marca.contains(filtro) || item.modelo.contains(filtro)
+  item.codigo.includes(filtro.toUpperCase()) || item.marca.includes(filtro.toUpperCase) || item.modelo.includes(filtro.toUpperCase)
   );
 }
+
 
  private listaAutos:any[] = [
   {"codigo":"001", "marca":"CHEVROLET", "modelo":"SAIL 1.5", "anio":"2023", "foto":"https://tuautoencasa.com/img/galeria/1619475914.jpg", "calificacion": 5},

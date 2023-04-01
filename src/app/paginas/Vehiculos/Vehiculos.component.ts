@@ -27,7 +27,9 @@ export class VehiculosComponent implements OnInit {
     alert("La calificacion es: " + calificacion);
   }
 
-  eliminarVehiculo(vehiculo:any){
+  eliminarVehiculo(codigo:string){
+    let index = this.listaAutos.findIndex((item) => item.codigo === codigo);
+    this.listaAutos.splice(index,1);
     
   }
 
