@@ -6,13 +6,13 @@
     <div class="row">
       <div class="mb-3">
         <label class="form-label">FILTRAR POR:</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" [(ngModel)]="filtrarPor">
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-6">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo</button>
+        <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo</button>
       </div>
     </div>
     <hr>
@@ -20,7 +20,7 @@
       <thead>
         <tr>
           <th colspan="6">
-            <button class="btn btn-success" (click)="mostrarImagen = !mostrarImagen">Mostrar Imagenes</button>
+            <button class="btn btn-outline-success" (click)="mostrarImagen = !mostrarImagen">Mostrar Imagenes</button>
           </th>
           <th>
             <div class="input-group input-group-sm mb-3">
