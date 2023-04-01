@@ -59,6 +59,10 @@
             <app-calificacion [calificacion]="vehiculo.calificacion" (select)="mostraAlerta($event)"></app-calificacion>
           </td>
           <td>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+              <a class="btn btn-sm btn-primary" [routerLink]="[vehiculo.codigo]">Ver</a>
+              <button class="btn btn-sm btn-danger" (click)="elminarVehiculo(vehiculo)">Eliminar</button>
+            </div>
           </td>
         </tr>
       </tbody>

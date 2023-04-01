@@ -26,6 +26,15 @@ export class VehiculosComponent implements OnInit {
   mostraAlerta(calificacion:any){
     alert("La calificacion es: " + calificacion);
   }
+  
+  elminarVehiculo(vehiculo:any){
+    this.vehiculoService.eliminarVehiculo(vehiculo.id).subscribe((respuesta)=>{
+      if(respuesta.codigo == 1){
+        alert(respuesta.mensaje);
+        this.consultaVehiculos();
+      }
+    });
+  }
   }
 
 

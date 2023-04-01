@@ -10,7 +10,24 @@ export class VehiculoService {
  getVehiculos(){
   return this.listaAutos;
  }
+
+ eliminarVehiculo(codigo:string){
+  let index= this.listaAutos.findIndex((item)=> item.codigo === codigo);
+  this.listaAutos.splice(index,1);
+ }
  
+ agregarVehiculo(vehiculo:any){
+  this.listaAutos.push(vehiculo);
+ }
+
+ actualizarVehiculo(datos:any,codigo:string){
+  let vehiculo = this.listaAutos.find((item)=> item.codigo == codigo);
+  vehiculo.marca = datos.marca? datos.marca : vehiculo.marca;
+  vehiculo.codigo = datos.codigo? datos.codigo : vehiculo.codigo;
+  vehiculo.modelo = datos.modelo? datos.modelo : vehiculo.modelo;
+  vehiculo.anio = datos.anio? datos.anio : vehiculo.anio;
+  vehiculo.calificacion = datos.calificacion? datos.calificacion : vehiculo.calificacion;
+ }
  private listaAutos:any[] = [
   {"codigo":"001", "marca":"CHEVROLET", "modelo":"SAIL 1.5", "anio":"2023", "foto":"https://tuautoencasa.com/img/galeria/1619475914.jpg", "calificacion": 5},
   {"codigo":"002", "marca":"CHEVROLET", "modelo":"ONIX", "anio":"2023", "foto":"https://img.remediosdigitales.com/858e8a/chevrolet-onix-2023-precio-mexico_/840_560.jpg", "calificacion": 3},
