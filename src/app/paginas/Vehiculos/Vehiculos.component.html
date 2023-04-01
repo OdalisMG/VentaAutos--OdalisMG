@@ -6,7 +6,7 @@
     <div class="row">
       <div class="mb-3">
         <label class="form-label">FILTRAR POR:</label>
-        <input type="text" class="form-control" [(ngModel)]="filtrarPor">
+        <input type="text" class="form-control" [(ngModel)]="filtrarPor" >
       </div>
     </div>
     <br>
@@ -47,7 +47,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let vehiculo of listaVehiculo; let i=index">
+        <tr *ngFor="let vehiculo of getListaVehiculos()">
           <td style="width: 10%">
             <img class="img-thumbnail" [src]="vehiculo.foto" *ngIf="mostrarImagen">
           </td>
@@ -61,7 +61,7 @@
           <td>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
               <a class="btn btn-sm btn-primary" [routerLink]="[vehiculo.codigo]">Ver</a>
-              <button class="btn btn-sm btn-danger" (click)="elminarVehiculo(vehiculo)">Eliminar</button>
+              <button class="btn btn-sm btn-danger" (click)="eliminarVehiculo(vehiculo)">Eliminar</button>
             </div>
           </td>
         </tr>

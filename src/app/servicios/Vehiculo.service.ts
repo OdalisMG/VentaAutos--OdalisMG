@@ -28,6 +28,16 @@ export class VehiculoService {
   vehiculo.anio = datos.anio? datos.anio : vehiculo.anio;
   vehiculo.calificacion = datos.calificacion? datos.calificacion : vehiculo.calificacion;
  }
+
+getVehiculosFiltro(filtro:string){
+  if(filtro == "" ){
+    return this.listaAutos;
+  }
+  return this.listaAutos.filter((item)=>
+  item.codigo.contains(filtro) || item.marca.contains(filtro) || item.modelo.contains(filtro)
+  );
+}
+
  private listaAutos:any[] = [
   {"codigo":"001", "marca":"CHEVROLET", "modelo":"SAIL 1.5", "anio":"2023", "foto":"https://tuautoencasa.com/img/galeria/1619475914.jpg", "calificacion": 5},
   {"codigo":"002", "marca":"CHEVROLET", "modelo":"ONIX", "anio":"2023", "foto":"https://img.remediosdigitales.com/858e8a/chevrolet-onix-2023-precio-mexico_/840_560.jpg", "calificacion": 3},
