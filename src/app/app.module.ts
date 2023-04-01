@@ -9,11 +9,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserInterceptor } from './interceptores/userInterceptor';
+import { CalificacionComponent } from './componentes/calificacion/calificacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VehiculosComponent
+    VehiculosComponent,
+    CalificacionComponent
   ],
   imports: [
     BrowserModule,

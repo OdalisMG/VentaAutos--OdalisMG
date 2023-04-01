@@ -55,7 +55,9 @@
           <td>{{vehiculo.marca}}</td>
           <td>{{vehiculo.modelo}}</td>
           <td>{{vehiculo.anio}}</td>
-          <td>{{vehiculo.calificacion}}</td>
+          <td>{{vehiculo.calificacion}}
+            <app-calificacion [calificacion]="vehiculo.calificacion"></app-calificacion>
+          </td>
           <td>
           </td>
         </tr>
