@@ -34,8 +34,9 @@ getVehiculosFiltro(filtro:string){
     return this.listaAutos;
   }
   return this.listaAutos.filter((item)=>
-  item.codigo.includes(filtro.toUpperCase()) || item.marca.includes(filtro.toUpperCase) || item.modelo.includes(filtro.toUpperCase)
+    item.codigo.includes(filtro.toUpperCase()) || item.marca.includes(filtro.toUpperCase) || item.modelo.includes(filtro.toUpperCase)
   );
+
 }
 
 
