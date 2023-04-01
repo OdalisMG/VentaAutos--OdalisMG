@@ -23,6 +23,9 @@ export class VehiculosComponent implements OnInit {
 
   cambioRows(){}
   
+  mostraAlerta(calificacion:any){
+    alert("La calificacion es: " + calificacion);
+  }
   }
 
 
