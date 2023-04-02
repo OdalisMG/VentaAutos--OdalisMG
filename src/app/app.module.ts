@@ -11,13 +11,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UserInterceptor } from './interceptores/userInterceptor';
 import { CalificacionComponent } from './componentes/calificacion/calificacion.component';
 import { PaginacionComponent } from './componentes/PaginacionTabla/paginacion.component';
+import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculosComponent,
     CalificacionComponent,
-    PaginacionComponent
+    PaginacionComponent,
+    VehiculoDetalleComponent
   ],
   imports: [
     BrowserModule,
