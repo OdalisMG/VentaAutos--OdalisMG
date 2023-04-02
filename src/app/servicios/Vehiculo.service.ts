@@ -54,6 +54,11 @@ getVehiculosFiltro(filtro:string){
 
 }
 
+getVehiculo(codigo:string){
+  return this.http.get<any>(this.baseUrl+"vehiculo/" + codigo );
+}
+
+
 
  private listaAutos:any[] = [
   {"codigo":"001", "marca":"CHEVROLET", "modelo":"SAIL 1.5", "anio":"2023", "foto":"https://tuautoencasa.com/img/galeria/1619475914.jpg", "calificacion": 5},
