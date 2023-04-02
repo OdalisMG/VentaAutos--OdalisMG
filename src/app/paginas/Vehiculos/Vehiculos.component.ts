@@ -21,7 +21,9 @@ export class VehiculosComponent implements OnInit {
 
   formularioVehiculo: FormGroup;
 
-  rows:number = 5
+  rows:number = 5;
+  pages:number;
+  page:number = 1;
   
   ngOnInit() {
     //this.listaVehiculo = this.vehiculoService.getVehiculos();
@@ -37,15 +39,13 @@ export class VehiculosComponent implements OnInit {
   }
 
   consultaVehiculos(){
-    this.vehiculoService.getVehiculos(this.filtrarPor).subscribe((respuesta)=>{
+    this.vehiculoService.getVehiculos(this.filtrarPor, this.rows, this.page).subscribe((respuesta)=>{
       if(respuesta.codigo ==1){
         this.listaVehiculo = respuesta.data;
       }
     });
 
   }
-
-  cambioRows(){}
   
   mostraAlerta(calificacion:any){
     alert("La calificacion es: " + calificacion);

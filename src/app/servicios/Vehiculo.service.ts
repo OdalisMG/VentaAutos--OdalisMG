@@ -11,9 +11,11 @@ export class VehiculoService {
  baseUrl = "https://www.epico.gob.ec/vehiculo/public/api/";
 
 
- getVehiculos(filtro?:string){
+ getVehiculos(filtro?:string, rows?:number, page?:number){
   let body = new HttpParams();
   body = filtro ? body.set ('filtro',filtro) : body;
+  body = rows ? body.set ('rows',rows) : body;
+  body = page ? body.set ('page',page) : body;
   return this.http.get<any>(this.baseUrl+"vehiculos/", {params:body});
  }
 
