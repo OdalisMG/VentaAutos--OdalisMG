@@ -42,6 +42,8 @@ export class VehiculosComponent implements OnInit {
     this.vehiculoService.getVehiculos(this.filtrarPor, this.rows, this.page).subscribe((respuesta)=>{
       if(respuesta.codigo ==1){
         this.listaVehiculo = respuesta.data;
+        this.rows = respuesta.rows;
+        this.pages = respuesta.pages;
       }
     });
 
@@ -78,6 +80,11 @@ export class VehiculosComponent implements OnInit {
         alert(mensaje);
       });
 
+  }
+
+  seleccionarPagina(page:number){
+    this.page = page;
+    this.consultaVehiculos();
   }
 
   }

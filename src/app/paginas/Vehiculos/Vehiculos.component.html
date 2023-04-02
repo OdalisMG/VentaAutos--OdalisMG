@@ -66,6 +66,15 @@
           </td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="7">
+            <app-paginacion [rows]="rows" [pages]="pages"(selectPage)="seleccionarPagina($event)"></app-paginacion>
+
+
+          </td>
+        </tr>
+      </tfoot>
     </table> 
     </div> 
 

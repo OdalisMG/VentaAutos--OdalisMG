@@ -10,12 +10,14 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UserInterceptor } from './interceptores/userInterceptor';
 import { CalificacionComponent } from './componentes/calificacion/calificacion.component';
+import { PaginacionComponent } from './componentes/PaginacionTabla/paginacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculosComponent,
-    CalificacionComponent
+    CalificacionComponent,
+    PaginacionComponent
   ],
   imports: [
     BrowserModule,

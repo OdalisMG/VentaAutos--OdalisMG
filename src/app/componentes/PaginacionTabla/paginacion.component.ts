@@ -1,20 +1,29 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-paginacion',
   templateUrl: './paginacion.component.html',
   styleUrls: ['./paginacion.component.css']
 })
-export class PaginacionComponent implements OnInit {
+export class PaginacionComponent implements OnInit, OnChanges {
 
   @Input() rows:number=10;
   @Input() pages:number;
+  @Output() selectPage = new EventEmitter<any>();
 
-  listaPaginas:any[];
-  constructor() { }
+    currentPage:number = 1;
+    listaPaginas:any[];
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    this.generarPaginacion();
+    }
+
+    ngOnChanges(changes: SimpleChanges): void {
+      if(changes['rows'] || changes['pages']){
+        this.generarPaginacion();
+      }
+    }
 
     generarPaginacion(){
       this.listaPaginas =[];
@@ -23,8 +32,24 @@ export class PaginacionComponent implements OnInit {
       }
     }
   
-    selectPage(page:number){
+    _selectPage(page:number){
+      this.currentPage = page;
+      this.selectPage.emit(page);
 
     }
 
+    atras(){
+      if(this.currentPage > 1){
+        this.currentPage--;
+        this.selectPage.emit(this.currentPage);
+      }
+    }
+
+    siguiente(){
+      if(this.currentPage < this.pages){
+        this.currentPage++;
+        this.selectPage.emit(this.currentPage);
+      }
+
+    }
 }
