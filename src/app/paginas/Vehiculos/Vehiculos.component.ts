@@ -53,8 +53,13 @@ export class VehiculosComponent implements OnInit {
     alert("La calificacion es: " + calificacion);
   }
 
-  eliminarVehiculo(vehiculoparam:any){
-  
+  eliminarVehiculo(vehiculo:any){
+    this.vehiculoService.eliminarVehiculo(vehiculo.id).subscribe((respuesta)=> {
+      if(respuesta.codigo == 1){
+        alert(respuesta.mensaje);
+        this.consultaVehiculos();
+      }
+    })
   }
 
   getListaVehiculos(){
