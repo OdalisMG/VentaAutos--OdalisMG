@@ -23,7 +23,7 @@ export class PaginacionComponent implements OnInit {
       }
     }
   
-    selectPage(){
+    selectPage(page:number){
 
     }
 
