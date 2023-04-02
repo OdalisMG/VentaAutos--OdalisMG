@@ -87,6 +87,11 @@ export class VehiculosComponent implements OnInit {
     this.consultaVehiculos();
   }
 
+  cambioRows(){
+    this.page = 1;
+    this.consultaVehiculos();
+  }
+
   }
 
 
