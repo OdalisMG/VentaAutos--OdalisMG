@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Vehiculo } from '../interfaces/Vehiculo';
 
 @Injectable({
   providedIn: 'root'
@@ -7,20 +8,30 @@ import { Injectable } from '@angular/core';
 export class VehiculoService {
 
  constructor(private http: HttpClient) { }
- baseUrl = "https://epico.gob.ec/vehiculo/"
+ baseUrl = "https://www.epico.gob.ec/vehiculo/public/api/";
 
- getVehiculos(){
-  return this.listaAutos;
+
+ getVehiculos(filtro?:string){
+  let body = new HttpParams();
+  body = filtro ? body.set ('filtro',filtro) : body;
+  return this.http.get<any>(this.baseUrl+"vehiculos/", {params:body});
  }
 
  eliminarVehiculo(codigo:string){
-  let index= this.listaAutos.findIndex((item)=> item.codigo === codigo);
-  this.listaAutos.splice(index,1);
+  let index = this.listaAutos.findIndex((item)=> item.codigo === codigo);
+  this.listaAutos.splice(index, 1);
  }
  
- agregarVehiculo(vehiculo:any){
-  this.listaAutos.push(vehiculo);
- }
+ agregarVehiculo(vehiculo:Vehiculo){
+  let body = new HttpParams();
+  body = vehiculo.codigo ? body.set('codigo',vehiculo.codigo) : body;
+  body = vehiculo.marca ? body.set('marca',vehiculo.marca) : body;
+  body = vehiculo.modelo ? body.set('modelo',vehiculo.modelo) : body;
+  body = vehiculo.anio ? body.set('anio',vehiculo.anio) : body;
+  body = vehiculo.calificacion ? body.set('calificacion',vehiculo.calificacion) : body;
+  body = vehiculo.foto ? body.set('foto',vehiculo.foto) : body;
+  return this.http.post<any>(this.baseUrl+'vehiculo/', body);
+}
 
  actualizarVehiculo(datos:any,codigo:string){
   let vehiculo = this.listaAutos.find((item)=> item.codigo == codigo);

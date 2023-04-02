@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { VehiculosComponent } from './paginas/Vehiculos/Vehiculos.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UserInterceptor } from './interceptores/userInterceptor';
 import { CalificacionComponent } from './componentes/calificacion/calificacion.component';
 
@@ -23,7 +23,9 @@ import { CalificacionComponent } from './componentes/calificacion/calificacion.c
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: UserInterceptor, multi:true}
