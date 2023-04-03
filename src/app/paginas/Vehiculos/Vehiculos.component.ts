@@ -40,13 +40,12 @@ export class VehiculosComponent implements OnInit {
 
   consultaVehiculos(){
     this.vehiculoService.getVehiculos(this.filtrarPor, this.rows, this.page).subscribe((respuesta)=>{
-      if(respuesta.codigo ==1){
+      if(respuesta.codigo == 1){
         this.listaVehiculo = respuesta.data;
         this.rows = respuesta.rows;
         this.pages = respuesta.pages;
       }
     });
-
   }
   
   mostraAlerta(calificacion:any){

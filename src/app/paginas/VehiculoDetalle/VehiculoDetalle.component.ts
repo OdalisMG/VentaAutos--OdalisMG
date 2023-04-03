@@ -55,8 +55,6 @@ export class VehiculoDetalleComponent implements OnInit {
     this.formularioVehiculo.controls['id'].setValue(this.vehiculo.id);
     this.formularioVehiculo.controls['foto'].setValue(this.vehiculo.foto);
     this.formularioVehiculo.controls['calificacion'].setValue(this.vehiculo.calificacion);
-
-
   }
 
   editar(){
