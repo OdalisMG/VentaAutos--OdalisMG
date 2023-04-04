@@ -95,6 +95,8 @@ export class VehiculosComponent implements OnInit {
     this.page = 1;
     this.consultaVehiculos();
   }
+  
+  
 
   }
 

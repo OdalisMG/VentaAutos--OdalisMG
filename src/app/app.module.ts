@@ -14,13 +14,13 @@ import { PaginacionComponent } from './componentes/PaginacionTabla/paginacion.co
 import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     VehiculosComponent,
     CalificacionComponent,
     PaginacionComponent,
-    VehiculoDetalleComponent
-  ],
+    VehiculoDetalleComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

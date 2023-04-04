@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VehiculosComponent } from './paginas/Vehiculos/Vehiculos.component';
 import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
-import { HomeComponent } from './paginas/Home/home.component';
+import { HomeComponent } from './paginas/Home/Home.component';
 
 const routes: Routes = [
   {
@@ -21,8 +21,8 @@ const routes: Routes = [
     path:'',
     redirectTo: 'home',
     pathMatch: 'full'
-  }
-
+  },
+  
 ];
 
 @NgModule({
