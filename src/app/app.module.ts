@@ -12,14 +12,16 @@ import { UserInterceptor } from './interceptores/userInterceptor';
 import { CalificacionComponent } from './componentes/calificacion/calificacion.component';
 import { PaginacionComponent } from './componentes/PaginacionTabla/paginacion.component';
 import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     VehiculosComponent,
     CalificacionComponent,
     PaginacionComponent,
     VehiculoDetalleComponent,
+      ClientesComponent
    ],
   imports: [
     BrowserModule,

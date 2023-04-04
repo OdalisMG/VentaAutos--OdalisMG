@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { VehiculosComponent } from './paginas/Vehiculos/Vehiculos.component';
 import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
 import { HomeComponent } from './paginas/Home/Home.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path:'clientes',
+    component: ClientesComponent
+  },
+  
   
 ];
 
