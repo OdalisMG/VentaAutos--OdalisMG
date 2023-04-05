@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterConfigOptions } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.css']
 })
-export class ClientesComponent implements OnInit {
+export class Clientescomponent implements OnInit {
 
-  tituloPagina = "Customer record";
+  tituloPagina = "c l i e n t";
   constructor(private _router: Router,) { }
 
   ngOnInit(): void {

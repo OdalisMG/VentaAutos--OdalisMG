@@ -12,7 +12,7 @@ import { UserInterceptor } from './interceptores/userInterceptor';
 import { CalificacionComponent } from './componentes/calificacion/calificacion.component';
 import { PaginacionComponent } from './componentes/PaginacionTabla/paginacion.component';
 import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
-import { ClientesComponent } from './clientes/clientes.component';
+import { Clientescomponent } from './clientes/clientes.component';
 
 @NgModule({
   declarations: [			
@@ -21,7 +21,7 @@ import { ClientesComponent } from './clientes/clientes.component';
     CalificacionComponent,
     PaginacionComponent,
     VehiculoDetalleComponent,
-      ClientesComponent
+    Clientescomponent
    ],
   imports: [
     BrowserModule,
