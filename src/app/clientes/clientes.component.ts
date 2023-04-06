@@ -11,9 +11,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class Clientescomponent implements OnInit {
 
-  tituloPagina = "c l i e n t";
+  tituloPagina = "Registro del cliente";
   formularioCliente: FormGroup;
-  
+
   constructor(private _router: Router,private clienteService: clienteService, private fomrBuilder: FormBuilder) { }
 
   ngOnInit(): void {
