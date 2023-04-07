@@ -2,9 +2,9 @@
   <div class="card-header">
     <h4>DETALLE DEL VEHICULO {{vehiculo?.nombre}} - {{vehiculo?.modelo}} - {{vehiculo?.anio}}</h4>
   <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-      <a class="btn btn-info" *ngIf="!isEditable" (click)="editar()">editar</a>
-      <a class="btn btn-danger" *ngIf="isEditable" (click)="cancelar()">cancelar</a>
-      <a class="btn btn-primary" *ngIf="isEditable" (click)="grabar()">grabar</a>
+      <a class="btn btn-outline-success" *ngIf="!isEditable" (click)="editar()">editar</a>
+      <a class="btn btn-outline-danger" *ngIf="isEditable" (click)="cancelar()">cancelar</a>
+      <a class="btn btn-outline-success" *ngIf="isEditable" (click)="grabar()">grabar</a>
     </div>
   </div>
   <div class="card-body" *ngIf="vehiculo">
@@ -62,7 +62,7 @@
   <div class="card-footer">
     <div class="row">
       <div class="col-3">
-        <a class="btn btn-light" [routerLink]="[ '../']">Regresar</a>
+        <a class="btn btn-outline-light" [routerLink]="[ '../']">Regresar</a>
       </div>
     </div>
   </div>

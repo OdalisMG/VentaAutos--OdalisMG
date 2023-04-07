@@ -13,15 +13,17 @@ import { CalificacionComponent } from './componentes/calificacion/calificacion.c
 import { PaginacionComponent } from './componentes/PaginacionTabla/paginacion.component';
 import { VehiculoDetalleComponent } from './paginas/VehiculoDetalle/VehiculoDetalle.component';
 import { Clientescomponent } from './clientes/clientes.component';
+import { MsjValidacionComponent } from './msjValidacion/msjValidacion.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     VehiculosComponent,
     CalificacionComponent,
     PaginacionComponent,
     VehiculoDetalleComponent,
-    Clientescomponent
+    Clientescomponent,
+    MsjValidacionComponent
    ],
   imports: [
     BrowserModule,
