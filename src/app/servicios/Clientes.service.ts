@@ -17,9 +17,11 @@ export class clienteService {
 
   getParamsCliente(cliente:Cliente){
     let body = new HttpParams();
-    body = cliente.Id ? body.set('Id', cliente.Id) : body;
-    body = cliente.Nombre ? body.set('Nombre', cliente.Nombre) : body;
-    body = cliente.Apellido ? body.set('Apellido', cliente.Apellido) : body;
+    body = cliente.id ? body.set('id', cliente.id) : body;
+    body = cliente.nombre ? body.set('nombre', cliente.nombre) : body;
+    body = cliente.apellido ? body.set('apellido', cliente.apellido) : body;
+    body = cliente.telefono ? body.set('telefono', cliente.telefono) : body;
+    body = cliente.email ? body.set('email', cliente.email) : body;
     return body;
   }
 

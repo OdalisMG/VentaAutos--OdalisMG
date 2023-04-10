@@ -1,5 +1,7 @@
 export interface Cliente {
-    Id:string;
-    Nombre:string;
-    Apellido:string;
+    id?:number;
+    nombre:string;
+    apellido:string;
+    email: string;
+    telefono?: number;
 }

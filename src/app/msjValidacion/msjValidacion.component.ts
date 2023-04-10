@@ -22,4 +22,11 @@ export class MsjValidacionComponent implements OnInit {
     }
     return this.control.invalid && this.summited;
   }
+
+  mostrarError1(){
+    if(!this.control){
+      return false;
+    }
+    return this.control.invalid && this.summited;
+  }
 }
